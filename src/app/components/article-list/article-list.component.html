@@ -1,0 +1,11 @@
+<div class="block-area">
+    <div class="block-title-4">
+        <h4 class="h5 title-arrow">
+            <span  *ngIf="sourceId!='null'">{{sourceId}} articles </span>
+            <hr *ngIf="sourceId!='null'">
+        </h4>
+    </div>
+    <div class="lista">
+        <app-article *ngFor="let article of articles" [saveOption]="saveOption" [article]="article"></app-article>
+    </div>
+</div>

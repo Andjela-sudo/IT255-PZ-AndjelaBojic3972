@@ -1,0 +1,11 @@
+<div class="d-flex justify-content-between align-items-center breaking-news bg-dark">
+    <marquee class="news-scroll" behavior="scroll" direction="left" onmouseover="this.stop();"
+        onmouseout="this.start();"> <span>Date: {{status.Global.Date | slice:0:10}}</span>
+        <span>New Confirmed: {{status.Global.NewConfirmed}}</span>
+        <span>New Deaths: {{status.Global.NewDeaths}}</span>
+        <span>New Recovered: {{status.Global.NewRecovered}}</span>
+        <span>Total Confirmed: {{status.Global.TotalConfirmed}}</span>
+        <span>Total Deaths: {{status.Global.TotalDeaths}}</span>
+        <span>Total Recovered: {{status.Global.TotalRecovered}}</span>
+    </marquee>
+</div>

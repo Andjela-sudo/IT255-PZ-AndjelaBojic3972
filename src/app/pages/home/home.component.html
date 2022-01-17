@@ -1,0 +1,14 @@
+<div class="form-outline">
+    <input [(ngModel)]="searchText" placeholder="search by title" type="search" class="form-control">
+</div>
+<form [formGroup]="filtersForm">
+    <label for="select-language">Select language:</label>
+    <select class="form-select"  formControlName="language" id="select-language"  formControlName="language" (change)="onChangedLanguage()">
+        <option *ngFor="let language of languages" [ngValue]="language">
+            {{ language }}
+        </option>
+    </select>
+</form>
+
+<h2>All articles:</h2>
+<app-article-list [articles]="articles| searchByTitle:searchText" [saveOption]="saveOption"></app-article-list>

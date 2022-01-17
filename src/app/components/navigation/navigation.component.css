@@ -1,0 +1,9 @@
+.navigacija{
+    padding-left: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+.navigacija div{
+
+    margin-right: 30px;
+}

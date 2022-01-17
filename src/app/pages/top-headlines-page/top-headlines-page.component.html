@@ -1,0 +1,18 @@
+<h2>Top headlines</h2>
+<hr>
+<form [formGroup]="filtersForm">
+    <label for="select-category">Select category:</label>
+    <select class="form-select"  formControlName="category" id="select-category"  formControlName="category" (change)="onCategoryChange()">
+        <option *ngFor="let category of categories" [ngValue]="category">
+            {{ category }}
+        </option>
+    </select>
+    <label for="select-country">Select country:</label>
+    <select class="form-select"  formControlName="country" id="select-country"  formControlName="country" (change)="onCountryChange()">
+        <option *ngFor="let country of countries" [ngValue]="country">
+            {{ country }}
+        </option>
+    </select>
+    <br>
+</form>
+<app-article-list [articles]="articles" [saveOption] = "saveOption"></app-article-list>

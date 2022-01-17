@@ -1,0 +1,5 @@
+
+<h2>Saved articles:</h2>
+<button (click)="clearAllSavedArticles()" [disabled]="articles.length==0">Delete all</button>
+<app-article-list *ngIf="articles.length!=0" [articles]="articles"  [saveOption] = "saveOption"></app-article-list>
+<p *ngIf="articles.length==0">No atricles saved yet...</p>

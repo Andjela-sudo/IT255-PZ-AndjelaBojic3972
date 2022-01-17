@@ -1,0 +1,22 @@
+<div class="col ">
+    <div class="card card-full hover-a mb-4 bg-dark  text-white">
+        <div class="ratio_230-129 image-wrapper justify-content-center">
+            <img [src]="article.urlToImage" alt="article.urlToImage" class="img-fluid lazy wp-post-image entered loaded">
+        </div>
+        <div class="card-body">
+            <div class="card-text mb-2 text-muted small">
+                <time class="news-date">{{article.publishedAt}}</time>
+                <span class="float-end"> {{article.sourceName}}</span>
+            </div>
+            <div class="card-title h5 h4-sm h6-md h5-lg">
+                <a [href]="article.url">{{article.title}}</a>
+            </div>
+            <div>
+                <p [innerHTML]="article.author"></p>
+                <p>{{article.description}}</p>
+                <button class="btn btn-primary" *ngIf="saveOption" (click)="addToSavedArticles()">Save article</button>
+            </div>
+        </div>
+    </div>
+
+</div>
